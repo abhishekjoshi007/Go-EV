@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.DashboardFragment">
+
+    <TextView
+        android:id="@+id/vehicle_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:padding="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Vehicle Model" />
+
+    <ProgressBar
+        android:id="@+id/battery_progressbar"
+        style="@style/Widget.MaterialProgressBar.ProgressBar.Horizontal.NoPadding"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_margin="4dp"
+        android:progress="100"
+        android:progressBackgroundTint="@color/colorSurface"
+        android:progressTint="@android:color/holo_green_light"
+        app:layout_constraintBottom_toBottomOf="@id/app_name"
+        app:layout_constraintEnd_toEndOf="@id/app_name"
+        app:layout_constraintStart_toStartOf="@id/app_name"
+        app:layout_constraintTop_toTopOf="@id/app_name" />
+
+    <TextView
+        android:id="@+id/app_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="8dp"
+        android:background="@drawable/goev_oval_shape"
+        android:text="@string/app_name"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/vehicle_name" />
+
+    <SeekBar
+        android:id="@+id/battery_percentage_seek_bar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="8dp"
+        android:max="100"
+        android:progress="50"
+        app:layout_constraintBottom_toBottomOf="@id/battery_percentage"
+        app:layout_constraintEnd_toStartOf="@id/battery_percentage"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/battery_percentage" />
+
+    <TextView
+        android:id="@+id/battery_percentage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="end"
+        android:minEms="2"
+        android:textAppearance="@style/TextAppearance.AppCompat.Title"
+        app:layout_constraintBottom_toBottomOf="@id/percent_symbol"
+        app:layout_constraintEnd_toStartOf="@+id/percent_symbol"
+        app:layout_constraintTop_toTopOf="@id/percent_symbol"
+        tools:text="50" />
+
+    <TextView
+        android:id="@+id/percent_symbol"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:text="@string/percentage_symbol"
+        android:textAppearance="@style/TextAppearance.AppCompat.Title"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/app_name" />
+
+    <TextView
+        android:id="@+id/range_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="@string/range_left"
+        android:textSize="18sp"
+        app:layout_constraintStart_toEndOf="@+id/app_name"
+        app:layout_constraintTop_toTopOf="@+id/app_name" />
+
+    <TextView
+        android:id="@+id/range_left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:background="@color/colorSurface"
+        android:gravity="center"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@id/app_name"
+        app:layout_constraintStart_toEndOf="@id/app_name"
+        app:layout_constraintTop_toBottomOf="@id/range_label"
+        tools:text="200" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:background="@color/colorSurface"
+        android:gravity="bottom"
+        android:paddingStart="0dp"
+        android:paddingEnd="8dp"
+        android:text="@string/km"
+        app:layout_constraintBottom_toBottomOf="@id/range_left"
+        app:layout_constraintStart_toEndOf="@id/range_left" />
+
+    <LinearLayout
+        android:id="@+id/more_option_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:background="#72AAAAAA"
+        android:padding="8dp"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@id/battery_percentage_seek_bar">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/details_up_key"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            app:srcCompat="@drawable/ic_keyboard_arrow_up_black_24dp" />
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/details_down_key"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            app:srcCompat="@drawable/ic_keyboard_arrow_down_black_24dp" />
+
+    </LinearLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@id/more_option_layout">
+
+        <TextView
+            android:id="@+id/number_of_passenger_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="32dp"
+            android:text="@string/number_of_passenger"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <SeekBar
+            android:id="@+id/number_of_passenger_seek_bar"
+            style="@style/Widget.AppCompat.SeekBar.Discrete"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="8dp"
+            android:max="8"
+            android:progress="5"
+            app:layout_constraintBottom_toBottomOf="@+id/number_of_passenger_label"
+            app:layout_constraintEnd_toStartOf="@+id/number_of_passengers"
+            app:layout_constraintStart_toEndOf="@+id/number_of_passenger_label"
+            app:layout_constraintTop_toTopOf="@+id/number_of_passenger_label" />
+
+        <TextView
+            android:id="@+id/number_of_passengers"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:gravity="center"
+            android:minEms="1"
+            app:layout_constraintBottom_toBottomOf="@+id/number_of_passenger_seek_bar"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/number_of_passenger_seek_bar"
+            tools:text="1" />
+
+        <CheckBox
+            android:id="@+id/is_ac_on_check_box"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:checked="true"
+            android:text="@string/is_ac_on"
+            android:textColor="@color/textColorPrimary"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/number_of_passenger_label" />
+
+        <TextView
+            android:id="@+id/ac_level_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:text="@string/ac_level"
+            app:layout_constraintBottom_toBottomOf="@+id/is_ac_on_check_box"
+            app:layout_constraintStart_toEndOf="@+id/is_ac_on_check_box"
+            app:layout_constraintTop_toTopOf="@+id/is_ac_on_check_box" />
+
+        <SeekBar
+            android:id="@+id/ac_level_seek_bar"
+            style="@style/Widget.AppCompat.SeekBar.Discrete"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:max="4"
+            android:progress="3"
+            app:layout_constraintBottom_toBottomOf="@+id/ac_level_label"
+            app:layout_constraintEnd_toStartOf="@+id/ac_level"
+            app:layout_constraintStart_toEndOf="@+id/ac_level_label"
+            app:layout_constraintTop_toTopOf="@+id/ac_level_label" />
+
+        <TextView
+            android:id="@+id/ac_level"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:gravity="center"
+            android:minEms="1"
+            app:layout_constraintBottom_toBottomOf="@+id/ac_level_seek_bar"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/ac_level_seek_bar"
+            tools:text="1" />
+
+        <CheckBox
+            android:id="@+id/is_wiper_on"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:checked="true"
+            android:text="@string/is_wiper_on"
+            android:textColor="@color/textColorPrimary"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/is_ac_on_check_box" />
+
+        <CheckBox
+            android:id="@+id/is_head_available"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
+            android:checked="true"
+            android:text="@string/is_head_lamp_on"
+            android:textColor="@color/textColorPrimary"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/is_wiper_on"
+            app:layout_constraintTop_toBottomOf="@id/is_ac_on_check_box" />
+
+        <CheckBox
+            android:id="@+id/is_audio_on"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:checked="true"
+            android:text="@string/is_audio_system_on"
+            android:textColor="@color/textColorPrimary"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/is_wiper_on" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/filled_round_rectangle"
+        android:text="@string/where_to_go"
+        android:textColor="@color/colorSurface"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

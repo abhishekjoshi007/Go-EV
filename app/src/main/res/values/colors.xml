@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#008577</color>
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorAccent">#D81B60</color>
+
+    <color name="colorOnPrimary">#ffffff</color>
+    <color name="colorOnPrimaryDark">#ffffff</color>
+    <color name="colorPrimaryLight">#0D008577</color>
+    <color name="colorSurface">@android:color/white</color>
+    <color name="textColor">#000000</color>
+    <color name="textColorPrimary">#000000</color>
+    <color name="textColorSecondary">#BD000000</color>
+    <color name="vegetarianColor">#008300</color>
+    <color name="nonVegetarianColor">#973F1C</color>
+
+    <color name="black_overlay">#66000000</color>
+
+</resources>

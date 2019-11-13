@@ -1,0 +1,55 @@
+<resources>
+    <string name="app_name">GoEV</string>
+    <string name="get_started">Get Started</string>
+
+
+    <string name="reliability_text">Have a track on your battery and feel free to travel without
+        worrying about battery. Get notified of the nearest electric station before your battery
+        exhausts.
+    </string>
+
+    <string name="easy_to_navigate_text">Easy Navigation along with the track on you battery in
+        addition to real time traffic
+    </string>
+
+    <string name="faster_payments">Pay at the EV stations as per your choice either by cash or by
+        your bank ATM Card
+    </string>
+    <string name="title_activity_login">Sign in</string>
+    <!-- Strings related to login -->
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password (optional)</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="error_invalid_email">This email address is invalid</string>
+    <string name="error_invalid_password">This password is too short</string>
+    <string name="error_incorrect_password">This password is incorrect</string>
+    <string name="error_field_required">This field is required</string>
+    <string name="permission_rationale">"Contacts permissions are needed for providing email
+        completions."
+    </string>
+    <string name="phone_number">Phone Number</string>
+    <string name="otp">OTP</string>
+    <string name="login">Login</string>
+    <string name="get_otp">Get OTP</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="get_vehicle_details">Get Vehicle Details</string>
+    <string name="battery_percentage">battery_percentage</string>
+    <string name="model_name">Model Name</string>
+    <string name="name">Name</string>
+    <string name="km">KM</string>
+    <string name="where_to_go">Where To Go?</string>
+    <string name="range_left">Range Left</string>
+    <string name="percentage_symbol">%</string>
+    <string name="number_of_passenger">Number of passenger</string>
+    <string name="ac_level">AC level</string>
+    <string name="is_ac_on">Is AC ON?</string>
+    <string name="title_activity_were_to_go">Map</string>
+    <string name="is_wiper_on">Is Wiper ON?</string>
+    <string name="is_head_lamp_on">Is Head Lamp ON?</string>
+    <string name="is_audio_system_on">Is Audio system ON?</string>
+
+</resources>
